@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+    <!-- Если хотите, чтобы эта база правил была базой по умолчанию, укажите default="true" -->
+    <kbase name="defaultKieBase" packages="rules" default="true">
+        <!-- Аналогично, чтобы эта сессия была сессией по умолчанию, укажите default="true" -->
+        <ksession name="defaultKieSession" default="true"/>
+    </kbase>
+</kmodule>
