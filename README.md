@@ -104,4 +104,7 @@ mvn exec:java
 
 ### 👨‍💻 Автор  
 **Dnoniel-Ermolaev**  
-📧 **Контакты:** [GitHub Profile](https://github.com/Dnoniel-Ermolaev)
+📧 **Контакты:** [GitHub Profile](https://github.com/Dnoniel-Ermolaev)  
+📩 **Email:** ermolaev12danil@gmail.com  
+
+---
