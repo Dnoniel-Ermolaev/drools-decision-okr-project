@@ -3,26 +3,31 @@ package rules;
 import com.example.drools.Patient;
 
 rule "Высокий риск ОКС"
+salience 10
 when
     $p : Patient( chestPain == true, ecgAbnormal == true, troponinHigh == true )
 then
     System.out.println("Диагноз: Высокий риск ОКС. Рекомендуется неотложное вмешательство.");
-    // можно установить флаг или свойство пациента, если нужно
     $p.setDiagnosis("Высокий риск ОКС");
+    update($p);
 end
 
 rule "Низкий риск ОКС"
+salience 10
 when
     $p : Patient( chestPain == true, ecgAbnormal == false, troponinHigh == false )
 then
     System.out.println("Диагноз: Низкий риск ОКС. Рекомендуется наблюдение и дополнительные обследования.");
     $p.setDiagnosis("Низкий риск ОКС");
+    update($p);
 end
 
 rule "Неопределённый риск"
+salience -10
 when
     $p : Patient( diagnosis == null )
 then
     System.out.println("Диагноз: Не удалось определить риск. Требуются дополнительные исследования.");
     $p.setDiagnosis("Неопределённый риск");
+    update($p);
 end
